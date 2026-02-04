@@ -34,8 +34,8 @@ end
 
 config = use_native_modules!
 
-target 'Mattermost' do
-  # Pods for Mattermost
+target 'May10Messenger' do
+  # Pods for May10Messenger
 
   use_expo_modules!
 
@@ -100,7 +100,7 @@ post_install do |installer|
     end
 
     # make sure the main app is NOT extension-only
-    app_target = installer.aggregate_targets.flat_map(&:user_project).flat_map(&:targets).find { |t| t.name == 'Mattermost' }
+    app_target = installer.aggregate_targets.flat_map(&:user_project).flat_map(&:targets).find { |t| t.name == 'May10Messenger' }
     if app_target
       app_target.build_configurations.each do |c|
         c.build_settings.delete('APPLICATION_EXTENSION_API_ONLY')
