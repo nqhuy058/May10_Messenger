@@ -9,7 +9,7 @@
 #import <UserNotifications/UserNotifications.h>
 #import <TurboLogIOSNative/TurboLog.h>
 
-#import "Mattermost-Swift.h"
+#import "May10Messenger-Swift.h"
 #import <os/log.h>
 
 #if __has_include(<MSAL/MSAL.h>)
