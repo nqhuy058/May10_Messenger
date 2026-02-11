@@ -11,6 +11,12 @@ const defaultConfig = getDefaultConfig(__dirname);
  *
  * @type {import('metro-config').MetroConfig}
  */
-const config = {};
+const config = {
+    resolver: {
+        extraNodeModules: {
+            events: require.resolve('events'),
+        },
+    },
+};
 
 module.exports = mergeConfig(defaultConfig, config);

@@ -10,6 +10,37 @@
       "client_info": {
         "mobilesdk_app_id": "1:184930218130:android:a0e553d1a1f043b5",
         "android_client_info": {
+          "package_name": "com.vdx.may10messenger"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "184930218130-8nahrspll1opff0uogtkh2qsv8coqngo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCkZkU2ECVg-mmdCG5OoHHQXtKiENuvWPE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 2
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:184930218130:android:a0e553d1a1f043b5",
+        "android_client_info": {
           "package_name": "com.mattermost.react.native"
         }
       },

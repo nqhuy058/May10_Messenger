@@ -4,11 +4,11 @@ import android.app.PendingIntent
 import android.content.Context
 import android.os.Bundle
 import androidx.core.app.NotificationCompat
-import com.mattermost.helpers.CustomPushNotificationHelper
-import com.mattermost.helpers.DatabaseHelper
-import com.mattermost.helpers.Network
-import com.mattermost.helpers.PushNotificationDataHelper
-import com.mattermost.helpers.database_extension.getServerUrlForIdentifier
+import com.vdx.may10messenger.helpers.CustomPushNotificationHelper
+import com.vdx.may10messenger.helpers.DatabaseHelper
+import com.vdx.may10messenger.helpers.Network
+import com.vdx.may10messenger.helpers.PushNotificationDataHelper
+import com.vdx.may10messenger.helpers.database_extension.getServerUrlForIdentifier
 import com.mattermost.rnutils.helpers.NotificationHelper
 import com.mattermost.turbolog.TurboLog
 import com.wix.reactnativenotifications.Defs.NOTIFICATION_RECEIVED_EVENT_NAME
