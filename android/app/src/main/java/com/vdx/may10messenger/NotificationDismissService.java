@@ -1,4 +1,4 @@
-package com.mattermost.rnbeta;
+package com.vdx.may10messenger;
 
 import android.content.Context;
 import android.content.Intent;

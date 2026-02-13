@@ -1,4 +1,4 @@
-package com.mattermost.rnbeta;
+package com.vdx.may10messenger;
 
 import android.app.Notification;
 import android.app.NotificationManager;
