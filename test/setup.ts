@@ -29,7 +29,7 @@ jest.mock('expo-application', () => {
         nativeApplicationVersion: '0.0.0',
         nativeBuildVersion: '0',
         applicationName: 'Mattermost',
-        applicationId: 'com.mattermost.rnbeta',
+        applicationId: 'com.vdx.may10messenger',
     };
 });
 
@@ -47,7 +47,7 @@ jest.mock('expo-device', () => {
         deviceName: 'Device',
         osName: 'Test',
         osVersion: '0.0.0',
-        applicationId: 'com.mattermost.rnbeta',
+        applicationId: 'com.vdx.may10messenger',
         isRootedExperimentalAsync: jest.fn().mockResolvedValue(false),
     };
 });
@@ -215,7 +215,7 @@ jest.doMock('react-native', () => {
         },
         RNUtils: {
             getConstants: () => ({
-                appGroupIdentifier: 'group.mattermost.rnbeta',
+                appGroupIdentifier: 'group.com.may10messenger',
                 appGroupSharedDirectory: {
                     sharedDirectory: '',
                     databasePath: '',
@@ -516,7 +516,7 @@ jest.mock('react-native-notifications', () => {
             ios: {
                 getDeliveredNotifications: jest.fn().mockImplementation(() => Promise.resolve(deliveredNotifications)),
                 removeDeliveredNotifications: jest.fn((ids) => {
-                    // eslint-disable-next-line
+
                     // @ts-ignore
                     deliveredNotifications = deliveredNotifications.filter((n) => !ids.includes(n.identifier));
                 }),

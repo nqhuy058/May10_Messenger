@@ -1,8 +1,6 @@
 // Copyright (c) 2015-present Mattermost, Inc. All Rights Reserved.
 // See LICENSE.txt for license information.
 
-/* eslint-disable max-lines */
-
 import RNUtils from '@mattermost/rnutils';
 import {applicationName} from 'expo-application';
 import {Alert, Platform} from 'react-native';
@@ -42,7 +40,7 @@ jest.mock('@mattermost/rnutils', () => ({
     getRealFilePath: jest.fn(),
     isRunningInSplitView: jest.fn().mockReturnValue({isSplit: false, isTablet: false}),
     getConstants: jest.fn().mockReturnValue({
-        appGroupIdentifier: 'group.mattermost.rnbeta',
+        appGroupIdentifier: 'group.com.may10messenger',
         appGroupSharedDirectory: {
             sharedDirectory: '',
             databasePath: '',

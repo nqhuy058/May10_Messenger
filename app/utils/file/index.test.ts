@@ -49,7 +49,7 @@ jest.mock('react-native', () => {
             ...RN.NativeModules,
             RNUtils: {
                 getConstants: () => ({
-                    appGroupIdentifier: 'group.mattermost.rnbeta',
+                    appGroupIdentifier: 'group.com.may10messenger',
                     appGroupSharedDirectory: {
                         sharedDirectory: '',
                         databasePath: '',
