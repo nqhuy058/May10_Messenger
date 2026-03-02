@@ -68,7 +68,7 @@ struct InitialView: View {
       )
       .replacingOccurrences(
         of: "{applicationName}",
-        with: Bundle.main.infoDictionary?["CFBundleDisplayName"] as? String ?? "May10 Messenger Beta"
+        with: Bundle.main.infoDictionary?["CFBundleDisplayName"] as? String ?? "Mattermost Beta"
       ),
       displayMode: .inline
     )

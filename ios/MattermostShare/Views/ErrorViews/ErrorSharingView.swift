@@ -34,7 +34,7 @@ struct ErrorSharingView: View {
                 )
                 .replacingOccurrences(
                   of: "{applicationName}",
-                  with: Bundle.main.infoDictionary?["CFBundleDisplayName"] as? String ?? "May10 Messenger Beta"
+                  with: Bundle.main.infoDictionary?["CFBundleDisplayName"] as? String ?? "Mattermost Beta"
                 )
               )
               .font(Font.custom("OpenSans", size: 16))
