@@ -204,7 +204,7 @@ const ServerForm = ({
                     returnKeyType='next'
                     testID='server_form.server_url.input'
                     theme={theme}
-                    value={url}
+                    value={url || 'https://wpc.garco10.com.vn/'}
                 />
                 <FloatingTextInput
                     rawInput={true}

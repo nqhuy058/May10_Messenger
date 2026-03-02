@@ -118,7 +118,7 @@ describe('PushNotifications', () => {
             await pushNotifications.onRemoteNotificationsRegistered({deviceToken});
 
             expect(storeDeviceToken).toHaveBeenCalledWith(
-                `apple_rnbeta-v2:${deviceToken}`,
+                `apple_rn:${deviceToken}`,
             );
         });
 

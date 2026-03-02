@@ -121,8 +121,8 @@ const LoginForm = ({
     const managedConfig = useManagedConfig<ManagedConfig>();
     const [isLoading, setIsLoading] = useState<boolean>(false);
     const [error, setError] = useState<string | undefined>();
-    const [loginId, setLoginId] = useState<string>('');
-    const [password, setPassword] = useState<string>('');
+    const [loginId, setLoginId] = useState<string>('admin');
+    const [password, setPassword] = useState<string>('XGNssfyBzG8BMnPcnJ4g');
     const [isPasswordVisible, setIsPasswordVisible] = useState(false);
     const [isDeactivated, setIsDeactivated] = useState(false);
     const emailEnabled = config.EnableSignInWithEmail === 'true';
