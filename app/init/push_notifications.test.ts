@@ -111,6 +111,10 @@ describe('PushNotifications', () => {
     });
 
     describe('onRemoteNotificationsRegistered', () => {
+        beforeEach(() => {
+            pushNotifications.configured = false;
+        });
+
         it('should store device token with correct prefix for iOS', async () => {
             Platform.OS = 'ios';
             const deviceToken = 'test-token';
@@ -123,7 +127,6 @@ describe('PushNotifications', () => {
         });
 
         it('should store device token with correct prefix for Android', async () => {
-            pushNotifications.configured = false;
             Platform.OS = 'android';
             const deviceToken = 'test-token';
 
