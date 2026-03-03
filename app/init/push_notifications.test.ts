@@ -63,7 +63,7 @@ jest.mock('@actions/local/thread');
 jest.mock('@actions/remote/notifications');
 jest.mock('@utils/general', () => ({
     ...jest.requireActual('@utils/general'),
-    isBetaApp: jest.fn(),
+    isBetaApp: false,
 }));
 jest.mock('@utils/helpers', () => ({
     ...jest.requireActual('@utils/helpers'),
