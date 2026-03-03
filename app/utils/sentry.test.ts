@@ -40,6 +40,10 @@ jest.mock('./log', () => ({
     logError: jest.fn(),
 }));
 
+jest.mock('@utils/general', () => ({
+    isBetaApp: true,
+}));
+
 jest.mock('@database/manager', () => ({
     getServerDatabaseAndOperator: jest.fn().mockReturnValue({
         database: {} as any, // Mocking database object
@@ -96,10 +100,11 @@ describe('initializeSentry function', () => {
         Config.SentryDsnAndroid = 'YOUR_ANDROID_DSN_HERE';
         Config.SentryDsnIos = 'YOUR_IOS_DSN_HERE';
 
-        initializeSentry();
-
-        expect(Sentry.init).toHaveBeenCalled();
+        // Phải set Platform.OS TRƯỚC khi gọi initializeSentry()
+        // để getDsn() đọc đúng platform và trả về đúng DSN
         Platform.OS = 'ios';
+        initializeSentry();
+        expect(Sentry.init).toHaveBeenCalled();
         expect(Sentry.init).toHaveBeenCalledWith({
             dsn: 'YOUR_IOS_DSN_HERE',
             sendDefaultPii: false,

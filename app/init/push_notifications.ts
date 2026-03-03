@@ -284,18 +284,20 @@ class PushNotificationsSingleton {
         if (!this.configured) {
             this.configured = true;
             const {deviceToken} = event;
-            let prefix;
+            let token;
 
             if (Platform.OS === 'ios') {
-                prefix = Device.PUSH_NOTIFY_APPLE_REACT_NATIVE;
+                // iOS dùng format "apple_rn:token" hoặc "apple_rnbeta:token" (không có -v2)
+                let prefix = Device.PUSH_NOTIFY_APPLE_REACT_NATIVE;
                 if (isBetaApp) {
                     prefix = `${prefix}beta`;
                 }
+                token = `${prefix}:${deviceToken}`;
             } else {
-                prefix = Device.PUSH_NOTIFY_ANDROID_REACT_NATIVE;
+                // Android dùng format "android_rn-v2:token"
+                token = `${Device.PUSH_NOTIFY_ANDROID_REACT_NATIVE}-v2:${deviceToken}`;
             }
 
-            const token = `${prefix}-v2:${deviceToken}`;
             storeDeviceToken(token);
             logDebug('Notification token registered', token);
 
